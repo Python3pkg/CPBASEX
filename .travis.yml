@@ -1,4 +1,4 @@
-sudo: false
+sudo: true
 language: python
 python:
   - "2.7"
@@ -6,5 +6,7 @@ python:
   - "3.7-dev" # 3.7 development branch
 
 install: 
-  - "python pbasex-Python/setup.py install"
-  - "python pbasex-Python/setup.py test"
+
+script: 
+  - "cd pbasex-Python;python setup.py install"
+  - "cd pbasex-Python;python setup.py test"
